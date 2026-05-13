@@ -21,10 +21,10 @@ const main = async () => {
 
     const { body, statusCode } = await getUsersController.handle();
 
-    res.send(body).status(statusCode);
+    res.status(statusCode).send(body);
   });
 
-  const port = process.env.PORT;
+  const port = process.env.PORT || 8000;
 
   app.listen(port, () => {
     console.log("servidor de pe");

@@ -1,3 +1,4 @@
+import { ifError } from "assert";
 import type { IGetUsersController, IGetUsersRepository } from "./protocols.js";
 
 export class GetUsersController implements IGetUsersController {
@@ -14,6 +15,7 @@ export class GetUsersController implements IGetUsersController {
             body: user
         }
     } catch (error) {
+      //console.error(error)
         return {
             statusCode: 500,
             body: "something went wrong"
