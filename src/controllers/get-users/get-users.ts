@@ -15,7 +15,7 @@ export class GetUsersController implements IGetUsersController {
             body: user
         }
     } catch (error) {
-      //console.error(error)
+      //console.error(error) aqui deu um erro de banco de dados e eu precisei para debugar
         return {
             statusCode: 500,
             body: "something went wrong"
